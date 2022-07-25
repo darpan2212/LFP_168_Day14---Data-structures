@@ -9,14 +9,17 @@ public class TestImpl {
 
 		MyLinkedList<Integer> intList = new MyLinkedList<>();
 
-		MyNode<Integer> firstNode = new MyNode<>(56);
-		intList.add(firstNode);
+		MyNode<Integer> firstNode = new MyNode<>(70);
+		intList.addFirst(firstNode);
 
 		MyNode<Integer> secondNode = new MyNode<>(30);
-		intList.add(secondNode);
+		intList.addFirst(secondNode);
 
-		MyNode<Integer> thirdNode = new MyNode<>(70);
-		intList.add(thirdNode);
+		MyNode<Integer> thirdNode = new MyNode<>(56);
+		intList.addFirst(thirdNode);
+
+		MyNode<Integer> fourthNode = new MyNode<>(90);
+		intList.addLast(fourthNode);
 
 		intList.print();
 	}

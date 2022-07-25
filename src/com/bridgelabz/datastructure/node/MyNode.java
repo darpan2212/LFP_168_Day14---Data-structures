@@ -1,9 +1,9 @@
 package com.bridgelabz.datastructure.node;
 
-public class MyNode<K> implements Node<K> {
+public class MyNode<K> implements INode<K> {
 
-	K key;
-	Node<K> next;
+	public K key;
+	public INode<K> next;
 
 	public MyNode(K key) {
 		this.key = key;
@@ -15,17 +15,17 @@ public class MyNode<K> implements Node<K> {
 	}
 
 	@Override
-	public Node<K> getNext() {
+	public INode<K> getNext() {
 		return next;
 	}
 
 	@Override
-	public void setNext(Node<K> next) {
+	public void setNext(INode<K> next) {
 		this.next = next;
 	}
 
 	@Override
 	public String toString() {
-		return "MyNode{key=" + key + "}=>";
+		return "MyNode{key:" + key + "}=>";
 	}
 }
