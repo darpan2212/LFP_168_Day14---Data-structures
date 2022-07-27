@@ -20,22 +20,37 @@ public class MyLinkedList<K> {
 	}
 
 	public void add(INode<K> node) {
-		if(head == null) {
+		if (head == null) {
 			head = node;
 		} else {
 			node.setNext(head);
 			head = node;
 		}
-		if(tail == null) {
+		if (tail == null) {
 			tail = node;
 		}
 	}
-	
+
 	public void print() {
 		INode<K> tempNode = head;
 		while (tempNode != null) {
 			System.out.print(tempNode);
 			tempNode = tempNode.getNext();
+		}
+	}
+
+	public void add(INode<K> node, int index) {
+		INode<K> tempNode = head;
+		for (int i = 0; i < index - 1; i++) {
+			tempNode = tempNode.getNext();
+		}
+		if (tempNode != null) {
+			node.setNext(tempNode.getNext());
+			tempNode.setNext(node);
+		} else {
+			System.out.println(
+					"List index is out of bound, you can not add new element at index "
+							+ index);
 		}
 	}
 
