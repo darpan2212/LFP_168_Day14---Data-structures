@@ -10,16 +10,16 @@ public class TestImpl {
 		MyLinkedList<Integer> intList = new MyLinkedList<>();
 
 		MyNode<Integer> firstNode = new MyNode<>(70);
-		intList.addFirst(firstNode);
+		intList.add(firstNode);
 
 		MyNode<Integer> secondNode = new MyNode<>(30);
-		intList.addFirst(secondNode);
+		intList.add(secondNode);
 
 		MyNode<Integer> thirdNode = new MyNode<>(56);
-		intList.addFirst(thirdNode);
+		intList.add(thirdNode);
 
 		MyNode<Integer> fourthNode = new MyNode<>(90);
-		intList.addLast(fourthNode);
+		intList.append(fourthNode);
 
 		intList.print();
 	}

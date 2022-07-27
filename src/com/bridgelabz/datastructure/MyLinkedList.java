@@ -1,14 +1,13 @@
 package com.bridgelabz.datastructure;
 
 import com.bridgelabz.datastructure.node.INode;
-import com.bridgelabz.datastructure.node.MyNode;
 
 public class MyLinkedList<K> {
 
 	INode<K> head;
 	INode<K> tail;
 
-	public void addLast(INode<K> node) {
+	public void append(INode<K> node) {
 		if (head == null) {
 			head = node;
 		}
@@ -20,7 +19,7 @@ public class MyLinkedList<K> {
 		}
 	}
 
-	public void addFirst(INode<K> node) {
+	public void add(INode<K> node) {
 		if(head == null) {
 			head = node;
 		} else {
