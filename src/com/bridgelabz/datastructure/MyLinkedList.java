@@ -32,11 +32,11 @@ public class MyLinkedList<K> {
 	}
 
 	public void print() {
-		INode<K> tempNode = head;
-		while (tempNode != null) {
-			System.out.print(tempNode);
-			tempNode = tempNode.getNext();
-		}
+		System.out.println(head);
+		/*
+		 * INode<K> tempNode = head; while (tempNode != null) {
+		 * System.out.print(tempNode); tempNode = tempNode.getNext(); }
+		 */
 	}
 
 	public void add(INode<K> node, int index) {
@@ -52,6 +52,12 @@ public class MyLinkedList<K> {
 					"List index is out of bound, you can not add new element at index "
 							+ index);
 		}
+	}
+
+	public void deleteFirst() {
+		INode<K> tempNode = head;
+		head = tempNode.getNext();
+		tempNode.setNext(null);
 	}
 
 }

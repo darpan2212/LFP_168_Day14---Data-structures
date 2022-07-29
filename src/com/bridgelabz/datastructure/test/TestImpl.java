@@ -12,22 +12,20 @@ public class TestImpl {
 		MyNode<Integer> firstNode = new MyNode<>(56);
 		intList.append(firstNode);
 
-		MyNode<Integer> secondNode = new MyNode<>(70);
+		MyNode<Integer> secondNode = new MyNode<>(30);
 		intList.append(secondNode);
 
-		MyNode<Integer> thirdNode = new MyNode<>(30);
+		MyNode<Integer> thirdNode = new MyNode<>(70);
 		intList.append(thirdNode);
 
-		MyNode<Integer> fourthNode = new MyNode<>(60);
-		intList.append(fourthNode);
-
-		MyNode<Integer> fifthNode = new MyNode<>(90);
-		intList.append(fifthNode);
-
-		MyNode<Integer> sixthNode = new MyNode<>(190);
-		intList.add(sixthNode, 6);
-
 		intList.print();
+
+		intList.deleteFirst();
+		System.out.println();
+		intList.print();
+
+		System.out.println();
+		System.out.println(firstNode);
 	}
 
 }
