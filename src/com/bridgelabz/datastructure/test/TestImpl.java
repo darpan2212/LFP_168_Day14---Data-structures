@@ -1,34 +1,27 @@
 package com.bridgelabz.datastructure.test;
 
-import com.bridgelabz.datastructure.MyLinkedList;
-import com.bridgelabz.datastructure.node.MyNode;
+import com.bridgelabz.datastructure.UnOrderedList;
 
 public class TestImpl {
 
 	public static void main(String[] args) {
 
-		MyLinkedList<Integer> intList = new MyLinkedList<>();
+		UnOrderedList<Integer> intList = new UnOrderedList<>();
 
-		MyNode<Integer> firstNode = new MyNode<>(56);
-		intList.append(firstNode);
+		intList.add(56);
+		intList.add(30);
+		intList.add(70);
+		intList.add(40);
+		intList.add(60);
 
-		MyNode<Integer> secondNode = new MyNode<>(30);
-		intList.append(secondNode);
-
-		MyNode<Integer> thirdNode = new MyNode<>(70);
-		intList.append(thirdNode);
-
-		MyNode<Integer> fourthNode = new MyNode<>(40);
-		intList.append(fourthNode);
-
-		System.out.println("Initial Linked list : ");
+		System.out.println("Initital unordered list : ");
 		intList.print();
+		
+		intList.remove(60);
 
-		intList.popLast();
-
-		System.out.println("After performing popLast :");
+		System.out.println("After removing 30 unordered list : ");
 		intList.print();
-
+		
 	}
 
 }
