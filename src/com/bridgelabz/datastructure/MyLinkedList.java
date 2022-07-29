@@ -54,10 +54,24 @@ public class MyLinkedList<K> {
 		}
 	}
 
-	public void deleteFirst() {
+	public void pop() {
 		INode<K> tempNode = head;
 		head = tempNode.getNext();
 		tempNode.setNext(null);
+	}
+
+	public void popLast() {
+		if (head == tail) {
+			head = null;
+			tail = null;
+		} else {
+			INode<K> tempNode = head;
+			while (tempNode.getNext().getNext() != null) {
+				tempNode = tempNode.getNext();
+			}
+			tempNode.setNext(null);
+			tail = tempNode;
+		}
 	}
 
 }

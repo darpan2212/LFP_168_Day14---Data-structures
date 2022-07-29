@@ -18,14 +18,17 @@ public class TestImpl {
 		MyNode<Integer> thirdNode = new MyNode<>(70);
 		intList.append(thirdNode);
 
+		MyNode<Integer> fourthNode = new MyNode<>(40);
+		intList.append(fourthNode);
+
+		System.out.println("Initial Linked list : ");
 		intList.print();
 
-		intList.deleteFirst();
-		System.out.println();
+		intList.popLast();
+
+		System.out.println("After performing popLast :");
 		intList.print();
 
-		System.out.println();
-		System.out.println(firstNode);
 	}
 
 }
