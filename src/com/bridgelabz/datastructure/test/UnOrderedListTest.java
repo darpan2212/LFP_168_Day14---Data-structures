@@ -33,5 +33,22 @@ public class UnOrderedListTest {
 		assertEquals(2, intList.index(40));
 		intList.print();
 	}
+
+	@Test
+	public void delete() {
+		UnOrderedList<Integer> intList = new UnOrderedList<>();
+		intList.append(56);
+		intList.append(30);
+		intList.append(70);
+		
+		intList.insert(40,2);
+
+		assertEquals(4, intList.size());
+		if (intList.search(40)) {
+			intList.remove(40);
+		}
+		assertEquals(3, intList.size());
+		intList.print();
+	}
 	
 }
