@@ -1,5 +1,6 @@
 package com.bridgelabz.datastructure.test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -18,6 +19,19 @@ public class UnOrderedListTest {
 		intList.add(40);
 		
 		assertTrue(intList.search(30));
+	}
+
+	@Test
+	public void insertAtPos() {
+		UnOrderedList<Integer> intList = new UnOrderedList<>();
+		intList.append(56);
+		intList.append(30);
+		intList.append(70);
+		
+		intList.insert(40,2);
+
+		assertEquals(2, intList.index(40));
+		intList.print();
 	}
 	
 }
