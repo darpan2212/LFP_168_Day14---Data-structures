@@ -3,7 +3,7 @@ package com.bridgelabz.datastructure;
 import com.bridgelabz.datastructure.node.INode;
 import com.bridgelabz.datastructure.node.MyNode;
 
-public class UnOrderedList<K> {
+public class UnOrderedList<K extends Comparable<K>> {
 
 	MyLinkedList<K> myLinkedList;
 	

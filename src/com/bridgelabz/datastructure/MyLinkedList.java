@@ -2,7 +2,7 @@ package com.bridgelabz.datastructure;
 
 import com.bridgelabz.datastructure.node.INode;
 
-public class MyLinkedList<K> {
+public class MyLinkedList<K extends Comparable<K>> {
 
 	INode<K> head;
 	INode<K> tail;
@@ -152,6 +152,28 @@ public class MyLinkedList<K> {
 			}
 		} else {
 			System.out.println("At index " + pos + ", new item can not be inserted");
+		}
+	}
+
+	public void sorted(INode<K> node) {
+		if (head == null) {
+			add(node);
+		} else {
+			int index = 0;
+			INode<K> tempNode = head;
+			if (node.compareTo(tempNode) < 0) {
+				add(node);
+			} else {
+				while (tempNode != null) {
+					index++;
+					if (tempNode.getNext() != null
+							&& node.compareTo(tempNode.getNext()) < 0) {
+						break;
+					}
+					tempNode = tempNode.getNext();
+				}
+				insert(node, index);
+			}
 		}
 	}
 

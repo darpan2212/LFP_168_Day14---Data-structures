@@ -1,6 +1,6 @@
 package com.bridgelabz.datastructure.node;
 
-public class MyNode<K> implements INode<K> {
+public class MyNode<K extends Comparable<K>> implements INode<K> {
 
 	public K key;
 	public INode<K> next;
@@ -30,5 +30,10 @@ public class MyNode<K> implements INode<K> {
 			return "MyNode{key:" + key + "}=>" + next;
 		else
 			return "MyNode{key:" + key + "}";
+	}
+
+	@Override
+	public int compareTo(INode<K> node) {
+		return this.getKey().compareTo(node.getKey());
 	}
 }
