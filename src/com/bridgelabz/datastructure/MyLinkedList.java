@@ -54,10 +54,17 @@ public class MyLinkedList<K extends Comparable<K>> {
 		}
 	}
 
-	public void pop() {
+	public INode<K> pop() {
 		INode<K> tempNode = head;
-		head = tempNode.getNext();
-		tempNode.setNext(null);
+		if (tempNode != null) {
+			head = tempNode.getNext();
+			tempNode.setNext(null);
+		}
+		return tempNode;
+	}
+
+	public INode<K> peek() {
+		return head;
 	}
 
 	public INode<K> popLast() {
